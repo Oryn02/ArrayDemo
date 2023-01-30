@@ -1,6 +1,7 @@
 package ie.atu.arrays;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Arraydemo {
 
@@ -19,7 +20,7 @@ public class Arraydemo {
             }
             catch(ArrayIndexOutOfBoundsException aiob)
             {
-                System.out.println("index 10 not filled as there is not enough space. \n");
+                System.out.println("***index 10 not filled as there is not enough space***\n");
             }
         }
 
