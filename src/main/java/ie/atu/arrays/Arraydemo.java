@@ -1,23 +1,28 @@
 package ie.atu.arrays;
 
+import java.util.Scanner;
+
 public class Arraydemo {
 
     public static void main(String[] args) {
 
         int[] array1;
-        int i;
+        int i,g;
         array1 = new int[10];
 
-        array1[0] = 100;
-        array1[1] = 200;
-        array1[2] = 300;
-        array1[3] = 400;
-        array1[4] = 500;
-        array1[5] = 600;
-        array1[6] = 700;
-        array1[7] = 800;
-        array1[8] = 900;
-        array1[9] = 1000;
+        Scanner input = new Scanner(System.in);
+
+        for(g = 0;g<=10;g++){
+            try {
+                System.out.println("Please enter a number:");
+                array1[g] = input.nextInt();
+            }
+            catch(ArrayIndexOutOfBoundsException aiob)
+            {
+                System.out.println("index 10 not filled as there is not enough space. \n");
+            }
+        }
+
 
         for(i = 0; i<10; i++) {
             System.out.println("element at index " + i + ": " + array1[i]);
